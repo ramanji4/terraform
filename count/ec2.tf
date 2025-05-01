@@ -28,7 +28,7 @@ resource "aws_security_group" "allow_ssh_connection" {
 
 
 resource "aws_instance" "terraform" {
-  count = length(var.instance_names)
+  count = length(var.instance_names)  #here we can mention static number also as count = 3
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_ssh_connection.id]
