@@ -19,7 +19,7 @@ resource "aws_security_group" "allow_ssh_connection" {
   }
 
   tags = {
-    Name = "allow_ssh1"
+    Name = "allow_ssh"
   }
 }
 
